@@ -169,6 +169,11 @@ h1{font-size:clamp(46px,7.2vw,98px);letter-spacing:-.01em}
 .art img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform 1.2s cubic-bezier(.22,1,.36,1)}
 .tile:hover .art img{transform:scale(1.05)}
 .art.photo::after{background:linear-gradient(180deg,rgba(0,0,0,0) 55%,rgba(0,0,0,.35));mix-blend-mode:normal}
+.art img.face{object-position:50% 18%}
+.art.logo{background:#121820}
+.art.logo img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;padding:24% 16%;box-sizing:border-box;transition:transform 1.2s cubic-bezier(.22,1,.36,1)}
+.art.logo::after{background:radial-gradient(circle at 50% 55%,rgba(229,85,46,.16),transparent 62%);mix-blend-mode:normal}
+.tile:hover .art.logo img{transform:scale(1.04)}
 .tile:nth-child(2) .art{--a:215deg;background:linear-gradient(215deg,var(--accent2),var(--accent3) 55%,var(--bg2))}
 .tile:nth-child(3) .art{--a:35deg;background:linear-gradient(35deg,var(--accent3),var(--accent) 60%,var(--bg2))}
 .art .num{position:absolute;top:14px;left:16px;font-size:12px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:rgba(255,255,255,.9);z-index:1;text-shadow:0 1px 2px rgba(0,0,0,.3)}
@@ -300,7 +305,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;
 :root[data-skin="3"] .work .eyebrow{color:var(--muted)}
 :root[data-skin="3"] .tile{background:var(--card);border:none}
 :root[data-skin="3"] .tile:hover{border:none;box-shadow:var(--glow)}
-:root[data-skin="3"] .art:not(.photo)::after{background:radial-gradient(circle at 30% 20%,rgba(255,255,255,.4),transparent 50%);mix-blend-mode:normal}
+:root[data-skin="3"] .art:not(.photo):not(.logo)::after{background:radial-gradient(circle at 30% 20%,rgba(255,255,255,.4),transparent 50%);mix-blend-mode:normal}
 :root[data-skin="3"] .note{display:inline-flex}
 :root[data-skin="3"] .shot .ph{border:none;box-shadow:var(--shadow);border-radius:6px}
 :root[data-skin="3"] .shot figcaption{font-family:var(--hand);font-size:20px;color:var(--muted)}
@@ -362,7 +367,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;
 :root[data-skin="5"] .ticker{display:block;border-color:var(--line);color:var(--accent)}
 :root[data-skin="5"] .work{background:var(--bg2)}
 :root[data-skin="5"] .art{aspect-ratio:4/5;margin:10px;border-radius:4px;border:1px solid var(--line)}
-:root[data-skin="5"] .art:not(.photo)::after{background:radial-gradient(circle at 50% 110%,rgba(255,255,255,.28),transparent 55%),repeating-linear-gradient(90deg,rgba(0,0,0,.06) 0 1px,transparent 1px 7px);mix-blend-mode:multiply}
+:root[data-skin="5"] .art:not(.photo):not(.logo)::after{background:radial-gradient(circle at 50% 110%,rgba(255,255,255,.28),transparent 55%),repeating-linear-gradient(90deg,rgba(0,0,0,.06) 0 1px,transparent 1px 7px);mix-blend-mode:multiply}
 :root[data-skin="5"] .tile-body{padding:12px 16px 18px}
 :root[data-skin="5"] .photo-grid{gap:12px}
 :root[data-skin="5"] .shot .ph{aspect-ratio:4/5;border-radius:4px}
@@ -445,11 +450,11 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;
           <div class="tile-body"><h3>VIP Lounge</h3><span class="k">Menu refresh</span><p>New menu, new photography, and a site that finally shows the food.</p></div>
         </a>
         <a class="tile" href="#hello" data-scroll="hello">
-          <div class="art photo"><img src="photos/frost-fins.jpg" alt="Frost &amp; Fins homepage: Feel good, fish good. Hand-built rods in St. Petersburg since 2021." width="1200" height="800" loading="lazy"><span class="num">Shopify</span></div>
+          <div class="art logo"><img src="photos/frost-fins-logo.png" alt="Frost &amp; Fins" width="606" height="108" loading="lazy"><span class="num">Shopify</span></div>
           <div class="tile-body"><h3>Frost &amp; Fins</h3><span class="k">Shopify · Custom rods &amp; apparel</span><p>A Shopify storefront for custom fishing rods and apparel, built so a rod order is as easy as buying a hat.</p></div>
         </a>
         <a class="tile" href="#about" data-scroll="about">
-          <div class="art"><span class="num">Agency · 2022–2026</span></div>
+          <div class="art photo"><img class="face" src="photos/headshot.jpg" alt="Cameron Clark, arms crossed, smiling" width="900" height="1125" loading="lazy"><span class="num">Agency · 2022–2026</span></div>
           <div class="tile-body"><h3>Skyway Media</h3><span class="k">Digital strategist</span><p>Four years at a local digital marketing agency, working with small and mid-sized businesses on all things digital marketing.</p></div>
         </a>
       </div>
