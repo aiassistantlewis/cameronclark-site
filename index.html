@@ -152,6 +152,8 @@ h1{font-size:clamp(46px,7.2vw,98px);letter-spacing:-.01em}
 .ring{align-self:center;width:132px;height:132px;border-radius:50%;border:1.5px dashed var(--accent);display:grid;place-items:center;text-decoration:none;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent-ink);font-weight:600;transition:transform .3s ease,background .2s;text-align:center}
 .ring:hover{transform:rotate(-6deg) scale(1.04);background:rgba(127,127,127,.06)}
 .hero-side .tag{font-family:var(--display);font-size:20px;line-height:1.2}
+.hero-portrait{position:relative;padding:0;overflow:hidden;min-height:440px}
+.hero-portrait img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 25%}
 .wave{display:none}
 .sun{display:none;position:absolute;top:28px;right:max(16px,env(safe-area-inset-right,0px));width:72px;height:72px;color:var(--accent);z-index:0}
 .sun::before{content:"";position:absolute;inset:18%;border-radius:50%;background:radial-gradient(circle,rgba(224,120,86,.45),transparent 70%);animation:sunpulse 4.5s ease-in-out infinite}
@@ -160,7 +162,7 @@ h1{font-size:clamp(46px,7.2vw,98px);letter-spacing:-.01em}
 .sun .disc{fill:var(--accent);stroke:none}
 @keyframes sunpulse{0%,100%{transform:scale(1);opacity:.7}50%{transform:scale(1.9);opacity:0}}
 @keyframes sunturn{to{transform:rotate(360deg)}}
-@media (max-width:860px){.hero .wrap{grid-template-columns:1fr}}
+@media (max-width:860px){.hero .wrap{grid-template-columns:1fr}.hero-portrait{min-height:0;aspect-ratio:3/2;max-width:100%}}
 
 /* ticker */
 .ticker{display:none;overflow:hidden;border-block:1px solid var(--line);padding-block:12px;font-size:13px;letter-spacing:.16em;text-transform:uppercase;font-weight:700;color:var(--muted)}
@@ -241,11 +243,6 @@ h1{font-size:clamp(46px,7.2vw,98px);letter-spacing:-.01em}
 /* hello */
 .hello-box{border:1px solid var(--accent);border-radius:var(--radius);padding:clamp(28px,5vw,56px);display:grid;grid-template-columns:1.4fr 1fr;gap:28px;align-items:center;background:var(--card);box-shadow:var(--glow)}
 .hello-box h2{font-size:clamp(34px,5vw,64px)}
-.hello-box.has-photo{grid-template-columns:1fr 1.25fr;padding:0;overflow:hidden;align-items:stretch;gap:0}
-.hello-photo{position:relative;min-height:100%}
-.hello-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 30%}
-.hello-box.has-photo .right{padding:clamp(28px,5vw,56px);gap:18px}
-.hello-box.has-photo h2{font-size:clamp(30px,3.8vw,48px)}
 .hello-box .right{display:flex;flex-direction:column;gap:16px;align-items:flex-start;min-width:0}
 .email{display:flex;align-items:center;gap:10px;flex-wrap:wrap;font-size:15px}
 .email code{font-family:var(--body);font-weight:600;color:var(--fg);user-select:all;word-break:break-all}
@@ -254,7 +251,7 @@ h1{font-size:clamp(46px,7.2vw,98px);letter-spacing:-.01em}
 .chips{display:flex;gap:8px;flex-wrap:wrap}
 .chip{font-size:13px;padding:7px 13px;border:1px solid var(--line);border-radius:999px;text-decoration:none;color:var(--fg);transition:border-color .15s}
 .chip:hover{border-color:var(--accent)}
-@media (max-width:760px){.hello-box{grid-template-columns:1fr}.hello-photo{position:relative;min-height:0;aspect-ratio:3/2;max-width:100%}}
+@media (max-width:760px){.hello-box{grid-template-columns:1fr}}
 
 /* footer */
 footer{padding-block:28px;font-size:13px;color:var(--muted);border-top:1px solid var(--line)}
@@ -342,8 +339,6 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;
 :root[data-skin="3"] .hello .eyebrow{color:var(--accent3)}
 :root[data-skin="3"] .hello em{color:var(--accent)}
 :root[data-skin="3"] .hello-box{background:transparent;border:none;box-shadow:none;padding-inline:0}
-:root[data-skin="3"] .hello-photo{border-radius:var(--radius);overflow:hidden}
-:root[data-skin="3"] .hello-box.has-photo{gap:28px}
 :root[data-skin="3"] .hello .muted{color:rgba(250,246,239,.82)}
 :root[data-skin="3"] .hello .email code{color:var(--bg)}
 :root[data-skin="3"] .hello .email button,:root[data-skin="3"] .hello .chip{color:var(--bg);border-color:rgba(250,246,239,.4)}
@@ -450,11 +445,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <path d="M0 50 C 70 25, 120 25, 190 50 S 310 75, 380 50 S 500 25, 570 50 S 690 75, 760 50 L800 50 L800 64 L0 64 Z" fill="#9CC8E3"/>
         </svg>
       </div>
-      <aside class="hero-side">
-        <div class="row"><span class="status">Booking shoots and sites for January</span><span>2026</span></div>
-        <a class="ring" href="#hello" data-scroll="hello">Say hello ↗</a>
-        <p class="tag">Small teams. <em>Honest</em> brands.</p>
-      </aside>
+      <aside class="hero-side hero-portrait"><img src="photos/cameron-headshot.jpg" alt="Cameron Clark, arms crossed, smiling in front of a world map" width="1200" height="801"></aside>
     </div>
   </section>
 
@@ -574,11 +565,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   <section class="band hello" id="hello">
     <div class="wrap">
-      <div class="hello-box has-photo">
-        <div class="hello-photo"><img src="photos/cameron-headshot.jpg" alt="Cameron Clark, arms crossed, smiling in front of a world map" width="1200" height="801" loading="lazy"></div>
-        <div class="right">
+      <div class="hello-box">
+        <div>
           <p class="eyebrow">Say hello</p>
           <h2>Have a project, a job, or a <em>wild idea</em>?</h2>
+        </div>
+        <div class="right">
           <p class="muted">Email is best. I answer within a day, usually faster.</p>
           <div class="email"><code id="email">hello@cameronclarkbusiness.com</code><button type="button" id="copy-email">Copy</button></div>
           <a class="btn glow" href="#top" data-scroll="top">Start a conversation ↗</a>
