@@ -170,9 +170,9 @@ h1{font-size:clamp(46px,7.2vw,98px);letter-spacing:-.01em}
 .tile:hover .art img{transform:scale(1.05)}
 .art.photo::after{background:linear-gradient(180deg,rgba(0,0,0,0) 55%,rgba(0,0,0,.35));mix-blend-mode:normal}
 .art img.face{object-position:50% 50%}
-.art.logo{background:#F6F1E8}
-.art.logo img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;padding:11%;box-sizing:border-box;transition:transform 1.2s cubic-bezier(.22,1,.36,1)}
-.art.logo::after{background:radial-gradient(circle at 50% 50%,rgba(244,86,41,.10),transparent 62%);mix-blend-mode:normal}
+.art.logo{background:#F45629}
+.art.logo img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;padding:14% 12%;box-sizing:border-box;transition:transform 1.2s cubic-bezier(.22,1,.36,1)}
+.art.logo::after{background:radial-gradient(circle at 50% 45%,rgba(255,255,255,.14),transparent 60%);mix-blend-mode:normal}
 .tile:hover .art.logo img{transform:scale(1.04)}
 .tile:nth-child(2) .art{--a:215deg;background:linear-gradient(215deg,var(--accent2),var(--accent3) 55%,var(--bg2))}
 .tile:nth-child(3) .art{--a:35deg;background:linear-gradient(35deg,var(--accent3),var(--accent) 60%,var(--bg2))}
@@ -450,7 +450,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;
           <div class="tile-body"><h3>VIP Lounge</h3><span class="k">Menu refresh</span><p>New menu, new photography, and a site that finally shows the food.</p></div>
         </a>
         <a class="tile" href="#hello" data-scroll="hello">
-          <div class="art logo"><img src="photos/frost-fins-crest.png" alt="Frost &amp; Fins crest: Feel good, fish good" width="900" height="900" loading="lazy"><span class="num">Shopify</span></div>
+          <div class="art logo"><img src="photos/frost-fins-lockup.png" alt="Frost &amp; Fins: Feel good, fish good" width="1400" height="275" loading="lazy"><span class="num">Shopify</span></div>
           <div class="tile-body"><h3>Frost &amp; Fins</h3><span class="k">Shopify · Custom rods &amp; apparel</span><p>A Shopify storefront for custom fishing rods and apparel, built so a rod order is as easy as buying a hat.</p></div>
         </a>
         <a class="tile" href="#about" data-scroll="about">
@@ -577,11 +577,11 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;
 <script>
 (function(){
   var NOTES={
-    1:'<b>Theme 1 · Editorial dark</b> — your Claude Design / LocalWP direction',
-    2:'<b>Theme 2 · Bento light</b> — your Lovable build',
-    3:'<b>Theme 3 · Polished Coastal</b> — your Cursor build (styleguide.html)',
-    4:'<b>Theme 4 · Bold &amp; beachy</b> — the Bolt example',
-    5:'<b>Theme 5 · Studio</b> — warm dark, photography first (new)'
+    1:'<b>Theme 1 · Editorial dark</b> — built by Claude',
+    2:'<b>Theme 2 · Bento light</b> — built on Lovable',
+    3:'<b>Theme 3 · Polished Coastal</b> — built in Cursor',
+    4:'<b>Theme 4 · Bold &amp; beachy</b> — built on Bolt',
+    5:'<b>Theme 5 · Studio</b> — built by Claude'
   };
   var root=document.documentElement, note=document.getElementById('skin-note');
   var btns=Array.prototype.slice.call(document.querySelectorAll('[data-skin-btn]'));
