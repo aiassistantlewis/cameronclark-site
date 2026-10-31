@@ -664,14 +664,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <p class="eyebrow">Say hello</p>
           <h2>Have a project, a job, or a <em>wild idea</em>?</h2>
           <p class="muted">A sentence or two is plenty. I answer within a day, usually faster.</p>
-          <div class="email"><code id="email">hello@cameronclarkbusiness.com</code><button type="button" id="copy-email">Copy</button></div>
           <div class="chips">
             <a class="chip" href="#hello" data-scroll="hello">Instagram</a>
             <a class="chip" href="#hello" data-scroll="hello">LinkedIn</a>
             <a class="chip" href="#hello" data-scroll="hello">GitHub</a>
           </div>
         </div>
-        <form class="cform" id="contact" action="https://formsubmit.co/hello@cameronclarkbusiness.com" method="POST" novalidate>
+        <form class="cform" id="contact" action="https://formsubmit.co/cam@camclarkmarketing.com" method="POST" novalidate>
           <div class="f2">
             <label>Name<input name="name" type="text" autocomplete="name" required placeholder="Your name"></label>
             <label>Email<input name="email" type="email" autocomplete="email" required placeholder="you@company.com"></label>
@@ -683,7 +682,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <input type="hidden" name="_template" value="table">
           <input type="hidden" name="_next" value="https://camclarkmarketing.com/#hello">
           <div class="f-actions"><button class="btn glow" type="submit">Send it ↗</button><span class="f-status" aria-live="polite"></span></div>
-          <div class="f-done" role="status"><h3>Got it. Thanks, <span id="f-name">friend</span>.</h3><p>I'll reply within a day, usually faster. If it's urgent, the email on the left works too.</p></div>
+          <div class="f-done" role="status"><h3>Got it. Thanks, <span id="f-name">friend</span>.</h3><p>I'll reply from cam@camclarkmarketing.com within a day, usually faster.</p></div>
         </form>
       </div>
     </div>
@@ -741,7 +740,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     });
   });
   var copyBtn=document.getElementById('copy-email'), emailEl=document.getElementById('email');
-  if(copyBtn){
+  var contactEmail=(function(){ var f=document.getElementById('contact'); var m=f&&(f.getAttribute('action')||'').match(/[^\/]+@[^\/]+$/); return m?m[0]:(emailEl?emailEl.textContent:''); })();
+  if(copyBtn && emailEl){
     copyBtn.addEventListener('click',function(){
       var txt=emailEl.textContent;
       function done(){ copyBtn.textContent='Copied'; setTimeout(function(){ copyBtn.textContent='Copy'; },1600); }
@@ -792,7 +792,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       var fd=new FormData(form), btn=form.querySelector('[type=submit]'), name=(fd.get('name')||'').trim(), first=name.split(' ')[0];
       if(!live){
         var body='Name: '+name+'\nEmail: '+fd.get('email')+'\nLooking for: '+fd.get('need')+'\n\n'+fd.get('message');
-        location.href='mailto:'+emailEl.textContent+'?subject='+encodeURIComponent('Project inquiry from '+name)+'&body='+encodeURIComponent(body);
+        location.href='mailto:'+contactEmail+'?subject='+encodeURIComponent('Project inquiry from '+name)+'&body='+encodeURIComponent(body);
         return;
       }
       var payload={}; fd.forEach(function(v,k){ payload[k]=String(v); }); payload._honey=''; payload._gotcha='';
@@ -804,7 +804,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         window.dataLayer=window.dataLayer||[]; window.dataLayer.push({event:'generate_lead',form_name:'contact',need:String(fd.get('need')||'')});
       }).catch(function(){
         btn.disabled=false;
-        status.innerHTML='That didn\'t go through — email me instead: <a href="mailto:'+emailEl.textContent+'">'+emailEl.textContent+'</a>';
+        status.innerHTML='That didn\'t go through — email me instead: <a href="mailto:'+contactEmail+'">'+contactEmail+'</a>';
       });
     });
   }
