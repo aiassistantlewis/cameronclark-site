@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Book a Repair or Check Status | Fixwell Device Lab</title>
+<meta name="description" content="Book a phone, tablet, laptop or console repair in St. Petersburg, or check the status of your repair ticket.">
+<meta name="robots" content="noindex, follow">
+<meta name="theme-color" content="#0d1321">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Book a Repair or Check Status | Fixwell Device Lab">
+<meta property="og:description" content="Book a phone, tablet, laptop or console repair in St. Petersburg, or check the status of your repair ticket.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%2064%2064%27%3E%3Crect%20width%3D%2764%27%20height%3D%2764%27%20rx%3D%2714%27%20fill%3D%27%230d1321%27/%3E%3Ctext%20x%3D%2732%27%20y%3D%2744%27%20font-family%3D%27Georgia%2Cserif%27%20font-size%3D%2736%27%20text-anchor%3D%27middle%27%20fill%3D%27white%27%3EF%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap">
+<link rel="stylesheet" href="../assets/demo-core.css">
+<link rel="stylesheet" href="style.css">
+<script>document.addEventListener('error',function(e){var t=e.target;if(t&&t.tagName==='IMG'){t.classList.add('img-failed');}},true);</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "ElectronicsStore", "name": "Fixwell Device Lab", "description": "Same-day phone, tablet, laptop and console repair in downtown St. Pete, with upfront prices and a 1-year warranty.", "telephone": "(727) 555-0185", "priceRange": "$$", "address": {"@type": "PostalAddress", "streetAddress": "777 4th St N", "addressLocality": "St. Petersburg", "addressRegion": "FL", "postalCode": "33701", "addressCountry": "US"}, "openingHours": ["Mo-Fr 09:00-19:00", "Sa 10:00-18:00", "Su 11:00-16:00"]}</script>
+</head>
+<body class="pg-book">
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header"><div class="wrap nav-row"><a class="cc-logo" href="../index.html" title="Back to Cameron Clark demo sites"><span>Cameron</span><em>Clark</em></a><span class="nav-sep" aria-hidden="true"></span><a class="brand" href="index.html" aria-label="Fixwell Device Lab home"><span class="fx-mark" aria-hidden="true"><svg viewBox="0 0 32 32" width="32" height="32"><rect width="32" height="32" rx="8" fill="#0d1321"/><path d="M9 10h14M9 16h9M9 22h5" stroke="#fff" stroke-width="2.6" stroke-linecap="round"/><circle cx="22.5" cy="22" r="3.2" fill="#2fd4a3"/></svg></span><span class="brand-name"><b>Fixwell</b><small>Device Lab</small></span></a><nav class="site-nav" id="site-nav" aria-label="Main"><ul><li><a href="index.html">Home</a></li><li><a href="repairs.html">Repairs &amp; Pricing</a></li><li><a href="how.html">How It Works</a></li><li><a href="about.html">About</a></li><li><a href="book.html" aria-current="page">Book</a></li></ul><a class="btn nav-cta" href="book.html">Book a repair</a></nav><button class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Menu"><span></span><span></span><span></span></button></div></header>
+<main id="main">
+
+<section class="page-hero gridbg"><div class="wrap ph-inner">
+  <p class="lbl">Book a repair</p>
+  <h1>Hold a bench slot and your part.</h1>
+  <p class="lead">Tell us what you've got and when you're coming. We'll text you to confirm the part is in stock and set aside for your model.</p>
+</div></section>
+
+<section class="section"><div class="wrap book-grid">
+  <form class="form spec book-form" id="book-form" data-demo-form>
+    <div class="spec-head"><h2 class="h3">New ticket</h2><span class="lbl">FX-NEW</span></div>
+    <div class="form-body">
+      <div class="two">
+        <div class="field"><label for="b-type">Device type</label><select id="b-type"><option>iPhone</option><option>Samsung Galaxy</option><option>Google Pixel</option><option>iPad</option><option>MacBook</option><option>Windows laptop</option><option>Game console</option><option>Other</option></select></div>
+        <div class="field"><label for="b-model">Model</label><input id="b-model" placeholder="e.g. iPhone 15 Pro"></div>
+      </div>
+      <div class="field"><label for="b-issue">What needs fixing?</label><select id="b-issue"><option>Cracked screen</option><option>Battery drains fast</option><option>Won't charge</option><option>Back glass</option><option>Water damage</option><option>Not sure, need a diagnosis</option></select></div>
+      <div class="field"><label for="b-notes">Anything else we should know?</label><textarea id="b-notes" placeholder="When did it start? Any drops or spills?"></textarea></div>
+      <fieldset class="seg"><legend>How do you want to get it to us?</legend>
+        <label><input type="radio" name="how" id="b-how-walk" checked> <span>Walk-in drop-off</span></label>
+        <label><input type="radio" name="how" id="b-how-appt"> <span>Appointment</span></label>
+        <label><input type="radio" name="how" id="b-how-mail"> <span>Mail-in box</span></label>
+      </fieldset>
+      <div class="two">
+        <div class="field"><label for="b-date">Day</label><input id="b-date" type="date"></div>
+        <div class="field"><label for="b-time">Time</label><select id="b-time"><option>9:00 AM</option><option>10:30 AM</option><option>12:00 PM</option><option>1:30 PM</option><option>3:00 PM</option><option>4:30 PM</option><option>6:00 PM</option></select></div>
+      </div>
+      <div class="two">
+        <div class="field"><label for="b-name">Name</label><input id="b-name" autocomplete="name" required></div>
+        <div class="field"><label for="b-phone">Mobile</label><input id="b-phone" type="tel" autocomplete="tel" required></div>
+      </div>
+      <div class="field"><label for="b-email">Email (optional)</label><input id="b-email" type="email" autocomplete="email"></div>
+      <label class="check"><input type="checkbox" id="b-texts" checked> <span>Text me status updates for this ticket</span></label>
+      <button class="btn btn-blue" type="submit">Create ticket <span aria-hidden="true">→</span></button>
+      <p class="demo-ok" role="status">Demo only: this is where your ticket number and confirmation text would appear.</p>
+    </div>
+  </form>
+  <aside class="book-side">
+    <div class="spec side-card"><div class="spec-head"><h2 class="h3">The lab</h2><span class="pill ok"><span class="led" aria-hidden="true"></span>Open</span></div>
+      <div class="side-body"><p>777 4th St N<br>St. Petersburg, FL 33701</p><p><a href="tel:+17275550185">(727) 555-0185</a></p><p>Two free 20-minute spaces out front, plus metered street parking on 4th St N.</p></div></div>
+    <div class="spec side-card"><div class="spec-head"><h2 class="h3">Hours</h2><span class="lbl">EST</span></div>
+      <dl class="spec-rows"><div><dt>Mon to Fri</dt><dd class="tnum">9 AM to 7 PM</dd></div><div><dt>Saturday</dt><dd class="tnum">10 AM to 6 PM</dd></div><div><dt>Sunday</dt><dd class="tnum">11 AM to 4 PM</dd></div></dl></div>
+    <div class="spec side-card"><div class="spec-head"><h2 class="h3">Before you come</h2></div>
+      <div class="side-body"><p>Back up your device if you can, turn off Find My for laptop repairs, and bring your charger for MacBooks.</p></div></div>
+  </aside>
+</div></section>
+
+<section class="section status-sec gridbg" id="status"><div class="wrap status-grid">
+  <div class="stack">
+    <p class="lbl">Already dropped off?</p>
+    <h2>Check repair status</h2>
+    <p>Enter the ticket number from your receipt or text, like FX-20481.</p>
+    <form class="status-form" id="st-form">
+      <div class="field"><label for="st-ticket">Ticket number</label><input id="st-ticket" placeholder="FX-20481" autocomplete="off"></div>
+      <button class="btn btn-blue" type="submit">Check status</button>
+    </form>
+  </div>
+  <div class="spec tracker" id="st-out" aria-live="polite">
+    <div class="spec-head"><span class="lbl">Ticket <b id="st-num">FX-20481</b></span><span class="pill">Sample ticket</span></div>
+    <div class="tr-meta"><p><b>iPhone 15 · Screen replacement</b></p><p class="lbl">Tech: Theo V. · Est. ready 2:45 PM</p></div>
+    <ol class="track">
+      <li class="done"><span class="node" aria-hidden="true"></span><div><b>Received</b><span class="tnum">1:52 PM</span></div></li>
+      <li class="done"><span class="node" aria-hidden="true"></span><div><b>Diagnosing</b><span class="tnum">2:04 PM</span></div></li>
+      <li class="now"><span class="node" aria-hidden="true"></span><div><b>Repairing</b><span>In progress</span></div></li>
+      <li><span class="node" aria-hidden="true"></span><div><b>Ready</b><span>We'll text you</span></div></li>
+    </ol>
+    <p class="fine">Demo only: every ticket number shows this sample.</p>
+  </div>
+</div></section>
+
+<section class="cta-strip"><div class="wrap cta-row">
+  <div><p class="lbl lbl-inv">Prefer to talk it through?</p><h2>A technician picks up the phone, not a call center.</h2></div>
+  <div class="row"><a class="btn btn-mint" href="tel:+17275550185">Call (727) 555-0185</a><a class="btn btn-inv" href="repairs.html">See prices</a></div>
+</div></section>
+
+</main>
+<footer class="site-footer"><div class="wrap"><div class="foot-grid"><div class="foot-brand"><div class="foot-logo"><span class="fx-mark" aria-hidden="true"><svg viewBox="0 0 32 32" width="32" height="32"><rect width="32" height="32" rx="8" fill="#0d1321"/><path d="M9 10h14M9 16h9M9 22h5" stroke="#fff" stroke-width="2.6" stroke-linecap="round"/><circle cx="22.5" cy="22" r="3.2" fill="#2fd4a3"/></svg></span><span class="brand-name"><b>Fixwell</b><small>Device Lab</small></span></div><p>Same-day phone, tablet, laptop and console repair in downtown St. Pete, with upfront prices and a 1-year warranty.</p></div><div><h3>Visit</h3><p>777 4th St N<br>St. Petersburg, FL 33701</p><p><a href="tel:+17275550185">(727) 555-0185</a></p></div><div><h3>Hours</h3><ul class="foot-hours"><li><span>Mon to Fri</span><span class="tnum">9 AM to 7 PM</span></li><li><span>Saturday</span><span class="tnum">10 AM to 6 PM</span></li><li><span>Sunday</span><span class="tnum">11 AM to 4 PM</span></li></ul></div><div><h3>Explore</h3><ul class="foot-links"><li><a href="index.html">Home</a></li><li><a href="repairs.html">Repairs &amp; Pricing</a></li><li><a href="how.html">How It Works</a></li><li><a href="about.html">About</a></li><li><a href="book.html">Book</a></li></ul><ul class="foot-social"><li><a href="#" aria-label="Instagram (demo link)">Instagram</a></li><li><a href="#" aria-label="Facebook (demo link)">Facebook</a></li><li><a href="#" aria-label="YouTube (demo link)">YouTube</a></li></ul></div></div><p class="demo-note">© <span data-year>2026</span> Fixwell Device Lab. This is a demo website designed by <a href="https://camclarkmarketing.com">Cameron Clark</a>. The business, people, prices and reviews are fictional. Photos from Unsplash.</p></div></footer>
+<script src="../assets/demo-core.js" defer></script>
+<script>(function(){try{var f=document.getElementById('st-form'),i=document.getElementById('st-ticket'),n=document.getElementById('st-num'),o=document.getElementById('st-out');if(!f||!i||!n||!o)return;f.addEventListener('submit',function(e){e.preventDefault();var v=(i.value||'').trim().toUpperCase().slice(0,14)||'FX-20481';n.textContent=v;o.classList.remove('flash');void o.offsetWidth;o.classList.add('flash');});}catch(e){}})();</script>
+</body>
+</html>

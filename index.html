@@ -113,6 +113,7 @@ em{font-style:italic;color:var(--accent-ink)}
 .btn.ghost{background:transparent;color:var(--fg);border-color:var(--line)}
 .btn.ghost:hover{border-color:var(--accent)}
 .btn.sm{padding:9px 16px;font-size:14px}
+.top-in .nav-demos{margin-right:-8px}
 
 /* header */
 .top{position:sticky;top:env(safe-area-inset-top,0px);z-index:9;background:var(--nav);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
@@ -130,8 +131,10 @@ em{font-style:italic;color:var(--accent-ink)}
   .themes{order:3;flex-basis:100%;justify-content:space-between;gap:2px;overflow:visible}
   .tbtn{flex:1 1 0;min-width:0;padding:8px 4px;font-size:12.5px;text-align:center}
   .top-in .btn{margin-left:auto}
+  .top-in .nav-demos + .btn{margin-left:0}
 }
 @media (max-width:340px){.tbtn{font-size:11px;padding-inline:2px}}
+@media (max-width:420px){.top-in{column-gap:12px}.top-in .btn.sm{padding:8px 12px;font-size:13px}}
 
 /* hero */
 .hero{isolation:isolate;overflow:hidden}
@@ -508,6 +511,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <button class="tbtn" type="button" data-skin-btn="4">Theme 4</button>
       <button class="tbtn" type="button" data-skin-btn="5">Theme 5</button>
     </nav>
+    <a class="btn sm ghost nav-demos" href="/demos/">Demos</a>
     <a class="btn sm" href="#hello" data-scroll="hello">Say hello</a>
   </div>
   <div class="wrap skin-note" aria-live="polite"><span id="skin-note"></span></div>

@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Cameron Clark Demo Sites</title>
+<meta name="description" content="Sample five-page websites for local businesses by Cameron Clark, a web designer in St. Petersburg, FL.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Work+Sans:wght@400;500;600;700&family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..600&family=DM+Sans:opsz,wght@9..40,400..700&family=Barlow+Condensed:wght@600;700;800&family=Barlow:wght@400;500;600;700&family=Archivo:wdth,wght@62..125,400..900&family=Manrope:wght@400;500;600;700;800&family=Bodoni+Moda:ital,wght@0,400;0,500;1,400;1,500&family=Jost:wght@300;400;500;600&family=Sora:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&family=Young+Serif&family=Source+Sans+3:wght@400;500;600;700&family=Pirata+One&family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Figtree:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Karla:wght@400;500;600;700&family=Shrikhand&family=Outfit:wght@400;500;600;700;800&family=DM+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&family=Hanken+Grotesk:wght@400;500;600&display=swap">
+<style>
+/* Layout: one editorial column of demo cards on a dark ground, each card wearing its demo's own colors and type */
+:root{--bg:#0b0c0f;--surface:#14161c;--line:#262a33;--fg:#f2f3f5;--muted:#a3a9b6;--blue:#0071e3;--cyan:#00d2ff;
+--display:'Instrument Serif',Georgia,'Times New Roman',serif;--body:'Hanken Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif;color-scheme:dark}
+*,*::before,*::after{box-sizing:border-box}
+html,body{background:var(--bg)}
+body{margin:0;color:var(--fg);font-family:var(--body);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+.wrap{max-width:1180px;margin-inline:auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+header.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:10;background:rgba(11,12,15,.86);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--bg)}
+.top-row{display:flex;align-items:center;gap:14px;min-height:68px}
+.cc-logo{display:inline-flex;align-items:baseline;gap:.28em;text-decoration:none;font-family:var(--display);font-size:19px;line-height:1;color:#f5f6f8;background:#0b0c0f;padding:8px 13px 7px;border-radius:999px;box-shadow:0 0 0 1px rgba(255,255,255,.14) inset;transition:box-shadow .25s}
+.cc-logo em{font-style:italic;color:#7fe3ff}
+.cc-logo:hover{box-shadow:0 0 0 1px rgba(0,210,255,.7) inset,0 0 18px rgba(0,210,255,.35)}
+.top-label{font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.top-back{margin-left:auto;font-size:14px;text-decoration:none;color:var(--muted);white-space:nowrap}
+.top-back:hover{color:var(--fg)}
+@media (max-width:480px){.top-label{display:none}}
+.intro{padding-block:72px 40px;display:grid;gap:18px}
+.intro h1{margin:0;font-family:var(--display);font-weight:400;font-size:clamp(2.6rem,7vw,5rem);line-height:1;letter-spacing:-.01em;text-wrap:balance}
+.intro h1 em{color:var(--cyan)}
+.intro p{margin:0;max-width:60ch;color:var(--muted);font-size:1.1rem}
+.meta{display:flex;flex-wrap:wrap;gap:8px 22px;font-size:14px;color:var(--muted)}
+.meta b{color:var(--fg);font-weight:600}
+.list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px;padding-bottom:80px}
+@media (max-width:820px){.list{grid-template-columns:minmax(0,1fr)}}
+.card{position:relative;display:grid;grid-template-rows:auto 1fr;background:var(--surface);border:1px solid var(--line);border-radius:14px;overflow:hidden;transition:border-color .25s,box-shadow .25s,transform .25s}
+.card:hover,.card:focus-within{border-color:rgba(0,210,255,.6);box-shadow:0 0 0 1px rgba(0,210,255,.25),0 0 32px rgba(0,113,227,.18)}
+.tile{position:relative;aspect-ratio:16/9;overflow:hidden;background:linear-gradient(135deg,var(--c1),var(--c2) 70%)}
+.tile img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .6s,opacity .4s}
+.tile img.img-failed{opacity:0}
+.card:hover .tile img{transform:scale(1.04)}
+.tile::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0) 30%,rgba(0,0,0,.72))}
+.tile-name{position:absolute;z-index:2;left:20px;right:20px;bottom:16px;color:#fff;font-size:clamp(1.5rem,3.4vw,2.1rem);line-height:1.05;text-wrap:balance}
+.swatch{position:absolute;z-index:2;top:14px;right:14px;display:flex;gap:6px}
+.swatch i{width:18px;height:18px;border-radius:50%;box-shadow:0 0 0 2px rgba(255,255,255,.85)}
+.num{position:absolute;z-index:2;top:14px;left:16px;font-size:12px;letter-spacing:.14em;color:#fff;text-transform:uppercase;background:rgba(0,0,0,.45);padding:4px 9px;border-radius:999px}
+.body{padding:20px 20px 22px;display:flex;flex-direction:column;gap:12px}
+.ind{margin:0;font-size:12.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--cyan)}
+.body p.desc{margin:0;color:var(--muted)}
+.pages{display:flex;flex-wrap:wrap;gap:8px;list-style:none;margin:0;padding:0}
+.pages a{display:inline-block;font-size:13px;text-decoration:none;padding:5px 11px;border-radius:999px;border:1px solid var(--line);color:var(--fg)}
+.pages a:hover{border-color:var(--cyan)}
+.open{margin-top:auto;white-space:nowrap;display:inline-flex;align-items:center;gap:8px;align-self:flex-start;text-decoration:none;font-weight:600;padding:11px 18px;border-radius:999px;border:1px solid var(--blue);box-shadow:0 0 16px rgba(0,113,227,.25)}
+.open:hover{background:rgba(0,113,227,.16)}
+.open::after{content:"";position:absolute;inset:0;z-index:1}
+.pages{position:relative;z-index:3}
+footer.bottom{border-top:1px solid var(--line);padding-block:48px 64px}
+.hello{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:20px}
+.hello h2{margin:0;font-family:var(--display);font-weight:400;font-size:clamp(1.8rem,4vw,2.6rem);line-height:1.1}
+.hello h2 em{color:var(--cyan)}
+.hello a.btn{text-decoration:none;font-weight:600;padding:13px 22px;border-radius:999px;border:1px solid var(--cyan);box-shadow:0 0 20px rgba(0,210,255,.25)}
+.fine{margin-top:28px;font-size:13px;color:var(--muted)}
+:focus-visible{outline:2px solid var(--cyan);outline-offset:3px}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+<meta property="og:title" content="Cameron Clark Demo Sites"><meta name="theme-color" content="#0b0c0f">
+</head><body>
+<a class="cc-skip" href="#demos" style="position:absolute;left:-999px">Skip to demos</a>
+<header class="top"><div class="wrap top-row"><a class="cc-logo" href="https://camclarkmarketing.com"><span>Cameron</span><em>Clark</em></a><span class="top-label">Demo sites</span><a class="top-back" href="https://camclarkmarketing.com">← Back to main site</a></div></header>
+<main id="demos"><section class="wrap intro">
+  <h1>Websites built for <em>local</em> businesses.</h1>
+  <p>Sample sites for the kinds of shops that make St. Pete feel like St. Pete. Each one is a complete five-page website with its own brand, built to load fast and work on any phone. Tap one to walk through it like a customer would.</p>
+  <div class="meta"><span><b>10</b> industries</span><span><b>5</b> pages each</span><span><b>Mobile-first</b> and SEO-ready</span></div>
+</section>
+<section class="wrap list" aria-label="Demo sites">
+<article class="card" style="--c1:#15274a;--c2:#c41e3a">
+  <div class="tile"><img src="assets/photos/1503951914875-452162b0f3f1-lg.webp" alt="" loading="lazy" decoding="async"><span class="num">Demo 01</span><span class="swatch" aria-hidden="true"><i style="background:#15274a"></i><i style="background:#c41e3a"></i><i style="background:#f4f3ef"></i></span>
+  <h2 class="tile-name" style="font-family:'Alfa Slab One',Georgia,serif">Pelican Row Barber Co.</h2></div>
+  <div class="body"><p class="ind">Barbershop</p><p class="desc">Classic and modern barbering in the Grand Central District, with online booking and walk-ins welcome.</p>
+  <ul class="pages" aria-label="Pelican Row Barber Co. pages"><li><a href="barber/index.html">Home</a></li><li><a href="barber/services.html">Services</a></li><li><a href="barber/barbers.html">Barbers</a></li><li><a href="barber/gallery.html">Gallery</a></li><li><a href="barber/book.html">Book</a></li></ul>
+  <a class="open" href="barber/index.html" aria-label="Open the Pelican Row Barber Co. demo">Open site <span aria-hidden="true">→</span></a></div>
+</article>
+<article class="card" style="--c1:#2e1530;--c2:#f7e3e3">
+  <div class="tile"><img src="assets/photos/1777287216954-2b4b22bb6bf2-lg.webp" alt="" loading="lazy" decoding="async"><span class="num">Demo 02</span><span class="swatch" aria-hidden="true"><i style="background:#2e1530"></i><i style="background:#f7e3e3"></i><i style="background:#c9b6e4"></i><i style="background:#c0c4cc"></i></span>
+  <h2 class="tile-name" style="font-family:'Fraunces',Georgia,serif">Lacquer &amp; Lune Nail Studio</h2></div>
+  <div class="body"><p class="ind">Nail salon</p><p class="desc">Structured gel, Gel-X and hand-painted nail art in a calm, sterilized studio on Central Ave.</p>
+  <ul class="pages" aria-label="Lacquer &amp; Lune Nail Studio pages"><li><a href="nails/index.html">Home</a></li><li><a href="nails/services.html">Services</a></li><li><a href="nails/gallery.html">Gallery</a></li><li><a href="nails/about.html">About</a></li><li><a href="nails/book.html">Book</a></li></ul>
+  <a class="open" href="nails/index.html" aria-label="Open the Lacquer &amp; Lune Nail Studio demo">Open site <span aria-hidden="true">→</span></a></div>
+</article>
+<article class="card" style="--c1:#1b1e22;--c2:#ff6b1a">
+  <div class="tile"><img src="assets/photos/1771340012378-3c86cb649193-lg.webp" alt="" loading="lazy" decoding="async"><span class="num">Demo 03</span><span class="swatch" aria-hidden="true"><i style="background:#1b1e22"></i><i style="background:#ff6b1a"></i><i style="background:#e7e6e1"></i><i style="background:#3d5a73"></i></span>
+  <h2 class="tile-name" style="font-family:'Barlow Condensed','Arial Narrow',sans-serif">Gulfline Auto Works</h2></div>
+  <div class="body"><p class="ind">Auto repair shop</p><p class="desc">Independent auto repair in South St. Pete with digital photo inspections, a free shuttle and a 24-month warranty.</p>
+  <ul class="pages" aria-label="Gulfline Auto Works pages"><li><a href="autorepair/index.html">Home</a></li><li><a href="autorepair/services.html">Services</a></li><li><a href="autorepair/specials.html">Specials</a></li><li><a href="autorepair/about.html">About</a></li><li><a href="autorepair/schedule.html">Schedule</a></li></ul>
+  <a class="open" href="autorepair/index.html" aria-label="Open the Gulfline Auto Works demo">Open site <span aria-hidden="true">→</span></a></div>
+</article>
+<article class="card" style="--c1:#0b3c49;--c2:#ffc93c">
+  <div class="tile"><img src="assets/photos/1617531653332-bd46c24f2068-lg.webp" alt="" loading="lazy" decoding="async"><span class="num">Demo 04</span><span class="swatch" aria-hidden="true"><i style="background:#0b3c49"></i><i style="background:#ffc93c"></i><i style="background:#eef2f3"></i><i style="background:#0a1f26"></i></span>
+  <h2 class="tile-name" style="font-family:'Archivo','Arial Black',sans-serif">Sunpoint Motors</h2></div>
+  <div class="body"><p class="ind">Used car dealership</p><p class="desc">Family-owned used car dealer on 34th Street with no-haggle prices, 150-point inspections and a 7-day return.</p>
+  <ul class="pages" aria-label="Sunpoint Motors pages"><li><a href="autosales/index.html">Home</a></li><li><a href="autosales/inventory.html">Inventory</a></li><li><a href="autosales/financing.html">Financing</a></li><li><a href="autosales/about.html">About</a></li><li><a href="autosales/contact.html">Contact</a></li></ul>
+  <a class="open" href="autosales/index.html" aria-label="Open the Sunpoint Motors demo">Open site <span aria-hidden="true">→</span></a></div>
+</article>
+<article class="card" style="--c1:#0d1f1b;--c2:#c8a24a">
+  <div class="tile"><img src="assets/photos/1777791375006-2384a0d27c23-lg.webp" alt="" loading="lazy" decoding="async"><span class="num">Demo 05</span><span class="swatch" aria-hidden="true"><i style="background:#0d1f1b"></i><i style="background:#c8a24a"></i><i style="background:#6e1f2b"></i><i style="background:#efe5cf"></i></span>
+  <h2 class="tile-name" style="font-family:'Bodoni Moda',Didot,Georgia,serif">The Low Tide Room</h2></div>
+  <div class="body"><p class="ind">Cocktail bar</p><p class="desc">An art deco cocktail lounge in downtown St. Petersburg with house signatures, live jazz on Thursdays and late small plates. 21 and over.</p>
+  <ul class="pages" aria-label="The Low Tide Room pages"><li><a href="cocktail/index.html">Home</a></li><li><a href="cocktail/menu.html">Menu</a></li><li><a href="cocktail/events.html">Events</a></li><li><a href="cocktail/private.html">Private Events</a></li><li><a href="cocktail/visit.html">Visit</a></li></ul>
+  <a class="open" href="cocktail/index.html" aria-label="Open the The Low Tide Room demo">Open site <span aria-hidden="true">→</span></a></div>
+</article>
+<article class="card" style="--c1:#0d1321;--c2:#2457ff">
+  <div class="tile"><img src="assets/photos/1539331586018-346b53b2aaa4-lg.webp" alt="" loading="lazy" decoding="async"><span class="num">Demo 06</span><span class="swatch" aria-hidden="true"><i style="background:#0d1321"></i><i style="background:#2457ff"></i><i style="background:#2fd4a3"></i><i style="background:#f4f6fa"></i></span>
+  <h2 class="tile-name" style="font-family:'Sora',system-ui,sans-serif">Fixwell Device Lab</h2></div>
+  <div class="body"><p class="ind">Phone &amp; computer repair</p><p class="desc">Same-day phone, tablet, laptop and console repair in downtown St. Pete, with upfront prices and a 1-year warranty.</p>
+  <ul class="pages" aria-label="Fixwell Device Lab pages"><li><a href="devicerepair/index.html">Home</a></li><li><a href="devicerepair/repairs.html">Repairs &amp; Pricing</a></li><li><a href="devicerepair/how.html">How It Works</a></li><li><a href="devicerepair/about.html">About</a></li><li><a href="devicerepair/book.html">Book</a></li></ul>
+  <a class="open" href="devicerepair/index.html" aria-label="Open the Fixwell Device Lab demo">Open site <span aria-hidden="true">→</span></a></div>
+</article>
+<article class="card" style="--c1:#1f3a2c;--c2:#e0a91b">
+  <div class="tile"><img src="assets/photos/1532634922-8fe0b757fb13-lg.webp" alt="" loading="lazy" decoding="async"><span class="num">Demo 07</span><span class="swatch" aria-hidden="true"><i style="background:#1f3a2c"></i><i style="background:#e0a91b"></i><i style="background:#b23a2a"></i><i style="background:#f8f6f0"></i></span>
+  <h2 class="tile-name" style="font-family:'Young Serif',Georgia,serif">Haus Linde Biergarten &amp; Küche</h2></div>
+  <div class="body"><p class="ind">German restaurant</p><p class="desc">A Bavarian beer hall and covered biergarten on Central Ave, with twelve German taps, schnitzel made to order and live accordion on Saturdays.</p>
+  <ul class="pages" aria-label="Haus Linde Biergarten &amp; Küche pages"><li><a href="german/index.html">Home</a></li><li><a href="german/menu.html">Menu</a></li><li><a href="german/biergarten.html">Biergarten &amp; Events</a></li><li><a href="german/story.html">Our Story</a></li><li><a href="german/visit.html">Visit &amp; Reserve</a></li></ul>
+  <a class="open" href="german/index.html" aria-label="Open the Haus Linde Biergarten &amp; Küche demo">Open site <span aria-hidden="true">→</span></a></div>
+</article>
+<article class="card" style="--c1:#2a1b14;--c2:#f5dd6b">
+  <div class="tile"><img src="assets/photos/1769114474398-a7aef0625ef0-lg.webp" alt="" loading="lazy" decoding="async"><span class="num">Demo 08</span><span class="swatch" aria-hidden="true"><i style="background:#2a1b14"></i><i style="background:#f5dd6b"></i><i style="background:#8fd1b8"></i><i style="background:#f2a6a0"></i></span>
+  <h2 class="tile-name" style="font-family:'Bricolage Grotesque',system-ui,sans-serif">Seventh Hour Coffee</h2></div>
+  <div class="body"><p class="ind">Coffee shop</p><p class="desc">A sunny downtown St. Pete coffee shop with small-batch beans, local pastries and a dog-friendly patio.</p>
+  <ul class="pages" aria-label="Seventh Hour Coffee pages"><li><a href="coffee/index.html">Home</a></li><li><a href="coffee/menu.html">Menu</a></li><li><a href="coffee/beans.html">Beans</a></li><li><a href="coffee/about.html">About</a></li><li><a href="coffee/visit.html">Visit</a></li></ul>
+  <a class="open" href="coffee/index.html" aria-label="Open the Seventh Hour Coffee demo">Open site <span aria-hidden="true">→</span></a></div>
+</article>
+<article class="card" style="--c1:#183a2b;--c2:#cfe8d5">
+  <div class="tile"><img src="assets/photos/1587317997383-2e6c1b24040f-lg.webp" alt="" loading="lazy" decoding="async"><span class="num">Demo 09</span><span class="swatch" aria-hidden="true"><i style="background:#183a2b"></i><i style="background:#cfe8d5"></i><i style="background:#ef7f9c"></i><i style="background:#f6e7a8"></i></span>
+  <h2 class="tile-name" style="font-family:'Cormorant Garamond',Georgia,serif">Wildmint Flower Bar</h2></div>
+  <div class="body"><p class="ind">Florist &amp; bouquet bar</p><p class="desc">A bouquet bar and florist on Central Ave with same-day delivery, workshops and wedding flowers.</p>
+  <ul class="pages" aria-label="Wildmint Flower Bar pages"><li><a href="florist/index.html">Home</a></li><li><a href="florist/shop.html">Shop</a></li><li><a href="florist/workshops.html">Workshops</a></li><li><a href="florist/weddings.html">Weddings</a></li><li><a href="florist/contact.html">Order &amp; Contact</a></li></ul>
+  <a class="open" href="florist/index.html" aria-label="Open the Wildmint Flower Bar demo">Open site <span aria-hidden="true">→</span></a></div>
+</article>
+<article class="card" style="--c1:#2340a0;--c2:#e6a92a">
+  <div class="tile"><img src="assets/photos/1521335629791-ce4aec67dd15-lg.webp" alt="" loading="lazy" decoding="async"><span class="num">Demo 10</span><span class="swatch" aria-hidden="true"><i style="background:#2340a0"></i><i style="background:#e6a92a"></i><i style="background:#f4b6c2"></i><i style="background:#121212"></i></span>
+  <h2 class="tile-name" style="font-family:'Shrikhand',Georgia,serif">Second Sunday Vintage</h2></div>
+  <div class="body"><p class="ind">Vintage clothing boutique</p><p class="desc">Hand-picked ’60s to Y2K clothing, denim, boots and bags on Central Ave, with new drops every Tuesday and a market every second Sunday.</p>
+  <ul class="pages" aria-label="Second Sunday Vintage pages"><li><a href="vintage/index.html">Home</a></li><li><a href="vintage/arrivals.html">New Arrivals</a></li><li><a href="vintage/sell.html">Sell to Us</a></li><li><a href="vintage/about.html">About</a></li><li><a href="vintage/visit.html">Visit</a></li></ul>
+  <a class="open" href="vintage/index.html" aria-label="Open the Second Sunday Vintage demo">Open site <span aria-hidden="true">→</span></a></div>
+</article>
+</section></main>
+<footer class="bottom"><div class="wrap"><div class="hello"><h2>Want one like this for <em>your</em> business?</h2><a class="btn" href="https://camclarkmarketing.com/#hello">Say hello</a></div>
+<p class="fine">Every business, person, price and review on these demo sites is fictional. Photos from Unsplash.</p></div></footer>
+<script>document.addEventListener('error',function(e){var t=e.target;if(t&&t.tagName==='IMG')t.classList.add('img-failed');},true);
+Array.prototype.forEach.call(document.querySelectorAll('.tile img'),function(i){if(i.complete&&i.naturalWidth===0)i.classList.add('img-failed');});
+try{if('scrollRestoration' in history)history.scrollRestoration='manual';}catch(e){}
+function toTop(){try{window.scrollTo({top:0,left:0,behavior:'instant'});}catch(e){window.scrollTo(0,0);}try{if(window.top!==window.self)document.body.scrollIntoView({block:'start',behavior:'instant'});}catch(e){}}
+if(!location.hash)toTop();window.addEventListener('pageshow',function(e){if(e.persisted&&!location.hash)toTop();});</script>
+</body></html>

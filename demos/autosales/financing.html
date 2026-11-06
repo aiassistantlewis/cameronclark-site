@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Car Financing &amp; Payment Calculator | Sunpoint Motors</title>
+<meta name="description" content="Estimate your monthly car payment, see typical rates by credit tier and get pre-qualified with a soft credit check.">
+<meta name="robots" content="noindex, follow">
+<meta name="theme-color" content="#0b3c49">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Car Financing &amp; Payment Calculator | Sunpoint Motors">
+<meta property="og:description" content="Estimate your monthly car payment, see typical rates by credit tier and get pre-qualified with a soft credit check.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%2064%2064%27%3E%3Crect%20width%3D%2764%27%20height%3D%2764%27%20rx%3D%2714%27%20fill%3D%27%230b3c49%27/%3E%3Ctext%20x%3D%2732%27%20y%3D%2744%27%20font-family%3D%27Georgia%2Cserif%27%20font-size%3D%2736%27%20text-anchor%3D%27middle%27%20fill%3D%27white%27%3ES%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Manrope:wght@400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap">
+<link rel="stylesheet" href="../assets/demo-core.css">
+<link rel="stylesheet" href="style.css">
+<script>document.addEventListener('error',function(e){var t=e.target;if(t&&t.tagName==='IMG'){t.classList.add('img-failed');}},true);</script>
+
+</head>
+<body class="pg-financing">
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header"><div class="wrap nav-row"><a class="cc-logo" href="../index.html" title="Back to Cameron Clark demo sites"><span>Cameron</span><em>Clark</em></a><span class="nav-sep" aria-hidden="true"></span><a class="brand" href="index.html" aria-label="Sunpoint Motors home"><svg class="mark" viewBox="0 0 32 32" aria-hidden="true"><path d="M6 19a10 10 0 0 1 20 0z" fill="#ffc93c"/><path d="M3 23h26M8 27.5h16" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" fill="none"/><path d="M16 3.5v3M6.2 7.6l2.1 2.1M25.8 7.6l-2.1 2.1" stroke="#ffc93c" stroke-width="2.4" stroke-linecap="round"/></svg><span class="brand-name"><b>Sunpoint</b><small>Motors</small></span></a><nav class="site-nav" id="site-nav" aria-label="Main"><ul><li><a href="index.html">Home</a></li><li><a href="inventory.html">Inventory</a></li><li><a href="financing.html" aria-current="page">Financing</a></li><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li></ul><a class="btn nav-cta" href="financing.html#prequal">Get pre-qualified</a></nav><button class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Menu"><span></span><span></span><span></span></button></div></header>
+<main id="main">
+
+<section class="phead"><div class="wrap phead-in"><div class="phead-text"><p class="eyebrow">Financing</p><h1>Know your payment before you visit</h1><p class="lead">Estimate a monthly payment, get pre-qualified with a soft credit check, and walk in knowing exactly where you stand.</p></div><figure class="ph phead-img r32"><img src="../assets/photos/1600191763291-49ebf60f03e1-lg.webp" srcset="../assets/photos/1600191763291-49ebf60f03e1-sm.webp 720w, ../assets/photos/1600191763291-49ebf60f03e1-lg.webp 1166w" sizes="(min-width:900px) 40vw, 100vw" width="1166" height="776" alt="Blue Audi sedan parked on green grass" fetchpriority="high"></figure></div></section>
+<section class="section calc-sec"><div class="wrap">
+  <div class="sec-head"><div><p class="eyebrow">Payment calculator</p><h2>Estimate your monthly payment</h2></div></div>
+  <form class="calc" id="calc" aria-label="Payment calculator">
+    <div class="calc-in">
+      <div class="field"><label for="c-price">Vehicle price</label><div class="affix"><span aria-hidden="true">$</span><input id="c-price" inputmode="decimal" value="33,900"></div></div>
+      <div class="field"><label for="c-down">Down payment and trade</label><div class="affix"><span aria-hidden="true">$</span><input id="c-down" inputmode="decimal" value="3,400"></div></div>
+      <div class="field"><label for="c-apr">Interest rate (APR)</label><div class="affix suf"><input id="c-apr" inputmode="decimal" value="6.99"><span aria-hidden="true">%</span></div></div>
+      <fieldset class="terms"><legend>Loan term</legend><div class="term-row"><label><input type="radio" name="term" value="36"> <span>36 mo</span></label><label><input type="radio" name="term" value="48"> <span>48 mo</span></label><label><input type="radio" name="term" value="60"> <span>60 mo</span></label><label><input type="radio" name="term" value="72" checked> <span>72 mo</span></label></div></fieldset>
+    </div>
+    <div class="calc-out" aria-live="polite">
+      <p class="out-label">Estimated monthly payment</p>
+      <p class="out-big tnum"><span id="c-out">$520</span><small>/mo</small></p>
+      <p class="out-sub">for <span id="c-n">72</span> months</p>
+      <dl class="out-dl">
+        <div><dt>Amount financed</dt><dd class="tnum" id="c-fin">$30,500</dd></div>
+        <div><dt>Total interest</dt><dd class="tnum" id="c-int">$6,929</dd></div>
+        <div><dt>Total cost</dt><dd class="tnum" id="c-tot">$40,829</dd></div>
+      </dl>
+      <a class="btn btn-sun btn-full" href="#prequal">Get pre-qualified</a>
+      <p class="out-fine">Estimate before Florida sales tax, tag, title and dealer fee.</p>
+    </div>
+  </form>
+</div></section>
+<section class="section tiers-sec"><div class="wrap tiers-grid">
+  <div class="stack">
+    <p class="eyebrow">Credit tiers</p>
+    <h2>What rate can I expect?</h2>
+    <p>We work with 14 banks and credit unions, including two local credit unions that often beat the big banks. Here's what customers in each range typically see on a used car this year.</p>
+    <p class="fine">Example rates for illustration only. Your rate depends on your full credit profile, the vehicle and the term.</p>
+  </div>
+  <div class="table-wrap"><table class="tiers">
+    <thead><tr><th scope="col">Tier</th><th scope="col">Score</th><th scope="col">Typical APR</th><th scope="col">What to expect</th></tr></thead>
+    <tbody>
+      <tr><th scope="row"><span class="tier t1">Excellent</span></th><td class="tnum">720+</td><td class="tnum">5.9% to 7.5%</td><td>Best rates, $0 down options</td></tr>
+      <tr><th scope="row"><span class="tier t2">Good</span></th><td class="tnum">660 to 719</td><td class="tnum">7.5% to 10.9%</td><td>Approved at most lenders</td></tr>
+      <tr><th scope="row"><span class="tier t3">Fair</span></th><td class="tnum">600 to 659</td><td class="tnum">10.9% to 15.9%</td><td>10% down helps your rate</td></tr>
+      <tr><th scope="row"><span class="tier t4">Rebuilding</span></th><td class="tnum">Under 600</td><td class="tnum">15.9% and up</td><td>Proof of income and a co-signer can help</td></tr>
+    </tbody>
+  </table></div>
+</div></section>
+<section class="section prequal" id="prequal"><div class="wrap pq-grid">
+  <div class="stack pq-copy">
+    <p class="eyebrow">Get pre-qualified</p>
+    <h2>Two minutes. Soft pull. No effect on your score.</h2>
+    <ul class="checks"><li>See your real rate before you visit</li><li>Pre-qualification is good for 30 days</li><li>No obligation to buy</li></ul>
+  </div>
+  <form class="form pq-form" data-demo-form>
+    <div class="two">
+      <div class="field"><label for="p-first">First name</label><input id="p-first" autocomplete="given-name" required></div>
+      <div class="field"><label for="p-last">Last name</label><input id="p-last" autocomplete="family-name" required></div>
+    </div>
+    <div class="two">
+      <div class="field"><label for="p-email">Email</label><input id="p-email" type="email" autocomplete="email" required></div>
+      <div class="field"><label for="p-phone">Mobile number</label><input id="p-phone" type="tel" autocomplete="tel" required></div>
+    </div>
+    <div class="two">
+      <div class="field"><label for="p-income">Monthly income before taxes</label><select id="p-income"><option>Under $2,500</option><option>$2,500 to $4,000</option><option>$4,000 to $6,000</option><option>$6,000 to $9,000</option><option>$9,000+</option></select></div>
+      <div class="field"><label for="p-job">Employment</label><select id="p-job"><option>Full time</option><option>Part time</option><option>Self-employed</option><option>Retired</option><option>Other</option></select></div>
+    </div>
+    <div class="two">
+      <div class="field"><label for="p-home">Housing</label><select id="p-home"><option>Rent</option><option>Own with mortgage</option><option>Own outright</option><option>Live with family</option></select></div>
+      <div class="field"><label for="p-zip">ZIP code</label><input id="p-zip" inputmode="numeric" autocomplete="postal-code"></div>
+    </div>
+    <div class="field"><label for="p-car">Vehicle you're interested in (optional)</label><input id="p-car" placeholder="2020 Chevrolet Camaro SS"></div>
+    <button class="btn btn-sun" type="submit">Check my rate</button>
+    <p class="demo-ok" role="status">Demo only: a real form would run a soft credit check and show your rate.</p>
+  </form>
+</div></section>
+<section class="visit"><div class="wrap visit-in">
+  <div class="visit-copy"><p class="eyebrow">Come see them in person</p><h2>Test drives every day the lot is open. No appointment needed.</h2>
+  <p>5800 34th St N, St. Petersburg · Mon to Fri 9 AM to 7 PM · Sat 9 AM to 6 PM · Sun 11 AM to 4 PM</p></div>
+  <div class="visit-acts"><a class="btn btn-sun" href="inventory.html">Browse inventory</a><a class="btn btn-ghost" href="tel:+17275550126">Call (727) 555-0126</a></div>
+</div></section>
+
+</main>
+<footer class="site-footer"><div class="wrap"><div class="foot-grid"><div class="foot-brand"><div class="foot-logo"><svg class="mark" viewBox="0 0 32 32" aria-hidden="true"><path d="M6 19a10 10 0 0 1 20 0z" fill="#ffc93c"/><path d="M3 23h26M8 27.5h16" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" fill="none"/><path d="M16 3.5v3M6.2 7.6l2.1 2.1M25.8 7.6l-2.1 2.1" stroke="#ffc93c" stroke-width="2.4" stroke-linecap="round"/></svg><span class="brand-name"><b>Sunpoint</b><small>Motors</small></span></div><p>Family-owned used car dealer on 34th Street with no-haggle prices, 150-point inspections and a 7-day return.</p></div><div><h3>Visit</h3><p>5800 34th St N<br>St. Petersburg, FL 33714</p><p><a href="tel:+17275550126">(727) 555-0126</a></p></div><div><h3>Hours</h3><ul class="foot-hours"><li><span>Mon to Fri</span><span class="tnum">9 AM to 7 PM</span></li><li><span>Saturday</span><span class="tnum">9 AM to 6 PM</span></li><li><span>Sunday</span><span class="tnum">11 AM to 4 PM</span></li></ul></div><div><h3>Explore</h3><ul class="foot-links"><li><a href="index.html">Home</a></li><li><a href="inventory.html">Inventory</a></li><li><a href="financing.html">Financing</a></li><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li></ul><ul class="foot-social"><li><a href="#" aria-label="Facebook (demo link)">Facebook</a></li><li><a href="#" aria-label="Instagram (demo link)">Instagram</a></li><li><a href="#" aria-label="YouTube (demo link)">YouTube</a></li></ul></div></div><p class="demo-note">© <span data-year>2026</span> Sunpoint Motors. This is a demo website designed by <a href="https://camclarkmarketing.com">Cameron Clark</a>. The business, people, prices and reviews are fictional. Photos from Unsplash.</p></div></footer>
+<script src="../assets/demo-core.js" defer></script>
+<script>(function(){try{
+var f=document.getElementById('calc');if(!f)return;
+function num(id){var el=document.getElementById(id);var v=parseFloat(String(el&&el.value||'').replace(/[^0-9.]/g,''));return isFinite(v)?v:0;}
+function money(v){if(!isFinite(v))v=0;return '$'+Math.round(v).toLocaleString('en-US');}
+function set(id,v){var e=document.getElementById(id);if(e)e.textContent=v;}
+function upd(){var price=num('c-price'),down=num('c-down'),apr=Math.min(num('c-apr'),40);
+var t=f.querySelector('input[name=term]:checked');var n=t?parseInt(t.value,10):72;if(!n)n=72;
+var P=Math.max(price-down,0),r=apr/1200,m=P===0?0:(r===0?P/n:P*r/(1-Math.pow(1+r,-n)));
+set('c-out',money(m));set('c-n',String(n));set('c-fin',money(P));set('c-int',money(m*n-P));set('c-tot',money(m*n+Math.min(down,price)));}
+f.addEventListener('input',upd);f.addEventListener('change',upd);
+f.addEventListener('submit',function(e){e.preventDefault();upd();});upd();
+}catch(e){}})();</script>
+</body>
+</html>
