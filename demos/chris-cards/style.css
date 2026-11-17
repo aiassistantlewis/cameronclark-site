@@ -144,6 +144,7 @@ h3{font-family:var(--font-body);font-weight:800;font-size:1.12rem;line-height:1.
 .tbl tbody th{font-weight:700}
 .tbl tbody tr:last-child th,.tbl tbody tr:last-child td{border-bottom:0}
 .tbl td:last-child{font-family:var(--font-num);color:var(--red);white-space:nowrap}
+@media (max-width:600px){.tbl-wrap{overflow:visible}.tbl{min-width:0}.tbl thead{display:none}.tbl,.tbl tbody,.tbl tr,.tbl th,.tbl td{display:block}.tbl tr{padding:14px 16px;border-bottom:1px solid var(--line)}.tbl tbody tr:last-child{border-bottom:0}.tbl th,.tbl td{padding:0;border:0}.tbl tbody th{font-size:1.02rem;margin-bottom:6px}.tbl td{display:flex;gap:12px;padding:3px 0}.tbl td::before{content:attr(data-label);flex:0 0 84px;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted,#6b6b6b);padding-top:3px;font-family:var(--font-body,inherit)}.tbl td:last-child{white-space:normal}}
 .price-list{list-style:none;background:#fff;border-radius:6px;padding:8px 20px;border:1px solid var(--line)}
 .price-list li{display:flex;justify-content:space-between;gap:14px;padding:13px 0;border-bottom:1px dashed var(--line)}
 .price-list li:last-child{border-bottom:0}
