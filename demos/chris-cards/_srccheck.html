@@ -1,7 +1,0 @@
-<!doctype html><html><head><meta charset="utf-8"><meta name="robots" content="noindex"><title>src check</title></head><body><pre id="o">loading</pre>
-<script>
-(async()=>{let out=[];for(const p of ['index','shop','sell','breaks','visit']){const t=await (await fetch(p+'.html?nc='+Date.now(),{cache:'no-store'})).text();
-out.push(p+': og '+(t.match(/property="og:image" content="([^"]+)"/)||[])[1]+' | h '+(t.match(/og:image:height" content="(\d+)"/)||[])[1]+' | tw '+(t.match(/name="twitter:image" content="([^"]+)"/)||[])[1]+' | GTM x'+(t.match(/GTM-MBJS8SCV/g)||[]).length+' | badname '+(t.match(/Chris(?!(&#x27;|'|’)s Cards|-cards|cards\.demo| went| looks| checks)/gi)||[]).length);}
-const r=await fetch('assets/og-home-v2.jpg?nc='+Date.now(),{cache:'no-store'});out.push('img '+r.status+' '+(await r.blob()).size);
-document.getElementById('o').textContent=out.join('\n');})();
-</script></body></html>
