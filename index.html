@@ -778,6 +778,29 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   }
   start();
 
+  /* ---- click tracking: every button and link click goes to Google Tag Manager (then GA4) ----
+     theme_select  = a Theme button (theme_number, theme_name)
+     button_click  = any other button or link (button_text, button_section, button_link) */
+  window.dataLayer=window.dataLayer||[];
+  var THEME_NAMES={1:'Theme 1 - Editorial dark',2:'Theme 2 - Bento light',3:'Theme 3 - Polished Coastal',4:'Theme 4 - Bold and beachy',5:'Theme 5 - Studio'};
+  function clean(s){ return String(s||'').replace(/\s+/g,' ').trim().slice(0,100); }
+  document.addEventListener('click',function(ev){
+    var el=ev.target&&ev.target.closest?ev.target.closest('a,button'):null;
+    if(!el) return;
+    var skin=el.getAttribute('data-skin-btn');
+    if(skin){
+      var tname=THEME_NAMES[skin]||('Theme '+skin);
+      window.dataLayer.push({event:'theme_select',theme_number:Number(skin),theme_name:tname});
+      try{ if(typeof window.clarity==='function') window.clarity('set','theme',tname); }catch(e){}
+      return;
+    }
+    var h3=el.querySelector('h3'), fig=el.closest('figure'), cap=fig&&fig.querySelector('figcaption'), img=el.querySelector('img');
+    var text=clean(el.getAttribute('aria-label'))||clean(h3&&h3.textContent)||clean(cap&&Array.prototype.map.call(cap.children,function(c){return c.textContent;}).join(' - '))||clean(el.textContent)||clean(img&&img.alt)||'(no text)';
+    var sec=el.closest('section[id],header,footer,dialog,.mcta');
+    var where=!sec?'page':sec.tagName==='DIALOG'?'photo-viewer':sec.id?sec.id:sec.classList.contains('mcta')?'sticky-bar':sec.tagName.toLowerCase();
+    window.dataLayer.push({event:'button_click',button_text:text,button_section:where,button_link:el.getAttribute('href')||''});
+  },true);
+
   /* ---- nav gets a frosted band once scrolled (matters for the floating pill in Theme 2) ---- */
   var topEl=document.querySelector('.top');
   if(topEl){ var onScroll=function(){ topEl.classList.toggle('scrolled',window.scrollY>12); }; window.addEventListener('scroll',onScroll,{passive:true}); onScroll(); }
